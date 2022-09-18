@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
 
+    <fragment
+        android:id="@+id/home"
+        android:name="com.krissmile31.phoneusagetracker.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_blockFragment"
+            app:destination="@id/blockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeline"
+        android:name="com.krissmile31.phoneusagetracker.timeline.TimelineFragment"
+        android:label="fragment_timeline"
+        tools:layout="@layout/fragment_timeline" >
+        <action
+            android:id="@+id/action_timeline_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/blockFragment"
+        android:name="com.krissmile31.phoneusagetracker.block.BlockFragment"
+        android:label="fragment_block"
+        tools:layout="@layout/fragment_block" >
+        <action
+            android:id="@+id/action_blockFragment_to_timelineFragment"
+            app:destination="@id/timeline" />
+    </fragment>
 </navigation>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="home"
+    <item android:id="@+id/home"
         android:title="@null"
         android:icon="@drawable/ic_home"/>
 
-    <item android:id="block"
+    <item android:id="@+id/block"
         android:title="@null"
         android:icon="@drawable/ic_block"/>
 
-    <item android:id="timeline"
+    <item android:id="@+id/timeline"
         android:title="@null"
         android:icon="@drawable/ic_timeline"/>
 
